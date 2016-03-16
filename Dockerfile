@@ -73,6 +73,8 @@ COPY modules/ /etc/ldap.dist/modules
 
 COPY entrypoint.sh /entrypoint.sh
 
+COPY schema.sh /schema.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["slapd", "-d", "32768", "-u", "openldap", "-g", "openldap"]
