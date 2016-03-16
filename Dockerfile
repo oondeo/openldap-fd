@@ -58,7 +58,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
         fusiondirectory-plugin-systems-schema=${FUSIONDIRECTORY_DEB_PKG_VERSION}* \
         fusiondirectory-plugin-weblink-schema=${FUSIONDIRECTORY_DEB_PKG_VERSION}* \
         fusiondirectory-plugin-webservice-schema=${FUSIONDIRECTORY_DEB_PKG_VERSION}* && \
-    apt-get remove -y --auto-remove gnupg && apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
     echo "es_ES.UTF-8 UTF-8" >> /etc/locale.gen && \
     dpkg-reconfigure locales
 
