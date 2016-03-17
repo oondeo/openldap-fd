@@ -10,7 +10,7 @@
             /etc/ldap/schema/fusiondirectory/systems-fd-conf.schema    
 
     if [[ -n "$SLAPD_ADDITIONAL_FD_SCHEMAS" ]]; then
-        IFS=","; declare -a schemas=($SLAPD_ADDITIONAL_FD_SCHEMAS)
+        declare -a schemas=($SLAPD_ADDITIONAL_FD_SCHEMAS)
 
         for schema in "${schemas[@]}"; do
             slapadd -n0 -F /etc/ldap/slapd.d -l "/etc/ldap/schema/fusiondirectory/${schema}.ldif" >/dev/null 2>&1
