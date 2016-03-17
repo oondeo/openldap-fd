@@ -77,4 +77,4 @@ COPY schema.sh /schema.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["slapd", "-d", "32768", "-u", "openldap", "-g", "openldap"]
+CMD ["slapd", "-d", "32768", "-u", "openldap", "-g", "openldap","-h" ,'ldap:/// ldapi:///']
