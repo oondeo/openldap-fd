@@ -91,4 +91,5 @@ else
     fi
 fi
 
-exec "$@"
+echo "starting slapd"
+/usr/sbin/slapd -h 'ldap:/// ldapi:///' -u openldap -g openldap -d `expr 64 + 256 + 512`
