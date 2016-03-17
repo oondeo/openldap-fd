@@ -66,7 +66,7 @@ EOF
     fi
 
     if [[ -n "$SLAPD_ADDITIONAL_MODULES" ]]; then
-        IFS=","; declare -a modules=($SLAPD_ADDITIONAL_MODULES)
+        declare -a modules=($SLAPD_ADDITIONAL_MODULES)
 
         for module in "${modules[@]}"; do
              module_file="/etc/ldap/modules/${module}.ldif"
