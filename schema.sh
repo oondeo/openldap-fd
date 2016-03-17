@@ -18,7 +18,7 @@
     fi
 
     if [[ -n "$SLAPD_ADDITIONAL_SCHEMAS" ]]; then
-        IFS=","; declare -a schemas=($SLAPD_ADDITIONAL_SCHEMAS)
+        declare -a schemas=($SLAPD_ADDITIONAL_SCHEMAS)
 
         for schema in "${schemas[@]}"; do
             slapadd -n0 -F /etc/ldap/slapd.d -l "/etc/ldap/schema/${schema}.ldif" >/dev/null 2>&1
